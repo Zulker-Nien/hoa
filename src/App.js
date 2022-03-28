@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from './Pages/Login/Login';
+import Home from './Pages/Home/Home';
+import { Routes, Route } from "react-router-dom";
+import HoaForm from './Pages/Forms/HoaForm/HoaForm';
+import CityCorpForm from './Pages/Forms/CityCorpForm/CityCorpForm';
+import PropertyForm from './Pages/Forms/PropertyForm/PropertyForm';
 
-function App() {
+const App = ()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Login/>} />
+      <Route path="/home" element={<Home/>} />
+      <Route path="/hoaform" element={<HoaForm/>} />
+      <Route path="/citycorpform" element={<CityCorpForm/>} />
+      <Route path="/propertyform" element={<PropertyForm/>} />
+    </Routes>
   );
 }
 

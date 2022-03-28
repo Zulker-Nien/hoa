@@ -1,0 +1,66 @@
+.loginContainer {
+  display: grid;
+  grid-template-columns: 45% auto;
+  div:nth-child(1) {
+    background-color: #154c8b;
+    // width: 75%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1:nth-child(1) {
+      font-size: 60px;
+      letter-spacing: 5px;
+      margin: 0;
+      color: #f0f8ff;
+      text-align: center;
+    }
+    h3 {
+      font-size: 30px;
+      margin: 0;
+      letter-spacing: 12px;
+      color: aliceblue;
+    }
+    h1:nth-child(3) {
+      text-align: center;
+      font-size: 59px;
+      letter-spacing: 18px;
+      margin: 0;
+      color: aliceblue;
+    }
+  }
+  div:nth-child(2) {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 25vw;
+      input {
+        height: 5vh;
+        border-radius: 20px;
+        border: 0px;
+        background-color: #f4f4f4;
+      }
+      input::placeholder {
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 15px;
+        color: #646464;
+        font-weight: 900;
+      }
+      input[type="text"] {
+        padding-left:30px;
+        font-size: 15px;
+      }
+      
+    }
+  }
+}
