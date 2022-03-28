@@ -75,10 +75,10 @@
     box-shadow: inset 0px 2px 20px 0.5px #154c8b;
   }
 }
-.dataButtons{
+.dataButtons {
   position: relative;
 }
-.extension{
+.extension {
   position: absolute;
   width: 100%;
   margin: 0;
@@ -86,4 +86,40 @@
   background-color: #fff;
   border-radius: 10px;
   transition: 0.4s ease-in-out all;
+  form{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    button{
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      background-color: black;
+      color: #f0f8ff;
+      margin: 20px 20px 0 ;
+    }
+    input {
+      margin: 20px 0 0 20px;
+      height: 30px;
+      flex-grow: 2;
+      border-bottom: 1px solid black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+    input::placeholder {
+      padding-top: 0;
+      padding-bottom: 0;
+      font-size: 15px;
+      color: #646464;
+      font-weight: 900;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+  
 }

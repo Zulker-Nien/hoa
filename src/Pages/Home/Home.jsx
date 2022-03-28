@@ -70,13 +70,10 @@ const Home = () => {
                   color={"#1d1d1d"}
                   iconColor={"#fff"}
                 />
-                <Button
-                  link="/hoaform"
-                  title="Update HOA"
-                  margin="0px 20px 20px 20px"
-                  color={"#1d1d1d"}
-                  iconColor={"#fff"}
-                />
+                <form className="update">
+                  <input type="text" required placeholder="Update HOA"/>
+                  <button>Go</button>
+                </form>
               </div>
             )}
             <div onClick={handleClickProp}>
@@ -89,13 +86,11 @@ const Home = () => {
             </div>
             {clickedProp && (
               <div className="extension">
-                <Button
-                  link="/propertyform"
-                  title="Update Input"
-                  margin="20px 20px 20px 20px"
-                  color={"#1d1d1d"}
-                  iconColor={"#fff"}
-                />
+               
+               <form className="update">
+                  <input type="text" required placeholder="Update Property"/>
+                  <button>Go</button>
+                </form>
               </div>
             )}
 
@@ -116,13 +111,11 @@ const Home = () => {
                   color={"#1d1d1d"}
                   iconColor={"#fff"}
                 />
-                <Button
-                  link="/citycorpform"
-                  title="Update HOA"
-                  margin="0px 20px 20px 20px"
-                  color={"#1d1d1d"}
-                  iconColor={"#fff"}
-                />
+                
+                <form className="update">
+                  <input type="text" required placeholder="Update City Corp"/>
+                  <button>Go</button>
+                </form>
               </div>
             )}
           </div>
