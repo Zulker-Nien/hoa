@@ -1,7 +1,6 @@
 import "./login.scss";
 import icon from "./icon/open-account-login.png";
 import Button from "../../components/Button";
-import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="loginContainer">
@@ -16,7 +15,12 @@ const Login = () => {
         <form>
           <input type="text" id="fname" name="fname" placeholder="USERNAME" />
           <br />
-          <input type="text" id="lname" name="lname" placeholder="PASSWORD" />
+          <input
+            type="text"
+            id="lname"
+            name="password"
+            placeholder="PASSWORD"
+          />
           <br />
           <br />
 

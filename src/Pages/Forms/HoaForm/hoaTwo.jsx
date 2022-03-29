@@ -7,7 +7,8 @@ const hoaTwo = (props) => {
     const { progress, back,arrowR ,arrowL } = props;
   return (
     <>
-      <FormFields label="PROPERTY MANAGEMENT COMPANY/ INDIVIDUAL" />
+    <form onSubmit={progress} >
+      <FormFields label="PROPERTY MANAGEMENT COMPANY/ INDIVIDUAL" required="required" type="text"/>
       <FormFields label="PROPERTY MANAGEMENT COMPANY WEBSITE" />
       <FormFields label="PROPERTY MANAGEMENT COMPANY EMAIL" />
       <FormFields label="PROPERTY MANAGEMENT COMPANY NUMBER" />
@@ -16,12 +17,13 @@ const hoaTwo = (props) => {
       <FormFields label="OTHER DOCUMENT" />
       <div className="formButton">
         <div onClick={back}>
-          <Button link="" title="Prev" iconColor="#fff" icon={arrowL} />
+          <Button title="Prev" iconColor="#fff" icon={arrowL} />
         </div>
-        <div onClick={progress}>
-          <Button link="" title="Next" iconColor="#fff" icon={arrowR} />
+        <div>
+          <Button title="Next" iconColor="#fff" icon={arrowR} />
         </div>
       </div>
+      </form>
     </>
   );
 };

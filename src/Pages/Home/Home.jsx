@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./home.scss";
 import c1 from "./imgs/Circle_1.png";
 import c2 from "./imgs/Circle_2.png";
 import logOut from "./imgs/logout.png";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 const Home = () => {
   const [clicked, setClicked] = useState(false);
   const [clicked2, setClicked2] = useState(false);
@@ -37,13 +37,14 @@ const Home = () => {
           <div className="circle"></div>
           <h1>John Doe</h1>
           <div className="bottom">
-            <Button
-              link={"/"}
-              title={"Logout"}
-              icon={logOut}
-              color="#f0f8ff"
-              iconColor="#154c8b"
-            />
+            <Link to="/">
+              <Button
+                title={"Logout"}
+                icon={logOut}
+                color="#f0f8ff"
+                iconColor="#154c8b"
+              />
+            </Link>
           </div>
         </div>
       </div>
@@ -63,15 +64,17 @@ const Home = () => {
             </div>
             {clicked && (
               <div className="extension">
-                <Button
-                  link="/hoaform"
-                  title="New Input"
-                  margin="20px 20px 20px 20px"
-                  color={"#1d1d1d"}
-                  iconColor={"#fff"}
-                />
+                <Link to={"/hoaform"}>
+                  <Button
+                    link=""
+                    title="New Input"
+                    margin="20px 20px 20px 20px"
+                    color={"#1d1d1d"}
+                    iconColor={"#fff"}
+                  />
+                </Link>
                 <form className="update">
-                  <input type="text" required placeholder="Update HOA"/>
+                  <input type="text" required placeholder="Update HOA" />
                   <button>Go</button>
                 </form>
               </div>
@@ -86,9 +89,8 @@ const Home = () => {
             </div>
             {clickedProp && (
               <div className="extension">
-               
-               <form className="update">
-                  <input type="text" required placeholder="Update Property"/>
+                <form className="update">
+                  <input type="text" required placeholder="Update Property" />
                   <button>Go</button>
                 </form>
               </div>
@@ -104,16 +106,18 @@ const Home = () => {
             </div>
             {clicked2 && (
               <div className="extension">
-                <Button
-                  link="/citycorpform"
-                  title="New Input"
-                  margin="20px 20px 20px 20px"
-                  color={"#1d1d1d"}
-                  iconColor={"#fff"}
-                />
-                
+                <Link to="/citycorpform">
+                  <Button
+                    link="/citycorpform"
+                    title="New Input"
+                    margin="20px 20px 20px 20px"
+                    color={"#1d1d1d"}
+                    iconColor={"#fff"}
+                  />
+                </Link>
+
                 <form className="update">
-                  <input type="text" required placeholder="Update City Corp"/>
+                  <input type="text" required placeholder="Update City Corp" />
                   <button>Go</button>
                 </form>
               </div>

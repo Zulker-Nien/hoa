@@ -1,14 +1,17 @@
 import "./hoaform.scss";
 import { useRef, useState } from "react";
 import BackBtn from "../../../components/BackBtn";
-import HoaOne from "./hoaOne";
+import HoaOne from "./HoaOne";
 import HoaTwo from "./hoaTwo";
 import HoaThree from "./hoaThree";
 import HoaFour from "./hoaFour";
 import arrow from "./arrow-right.png";
 import arrowL from "./arrow-left.png";
+import { useNavigate } from "react-router-dom";
 
 const HoaForm = () => {
+  const navigate = useNavigate();
+
   const ref = useRef();
   const [progress, setProgress] = useState(1);
   const handleProgress = () => {
@@ -22,7 +25,8 @@ const HoaForm = () => {
     console.log(`back:  ${progress}` )
   };
   const handleSubmit = () => {
-    setProgress(0);
+    setProgress(progress);
+    navigate('/home')
   };
   return (
     <>
@@ -74,9 +78,9 @@ const HoaForm = () => {
           </div>
         </div>
 
-        <form className="forms">
+        <div className="forms">
           {progress === 1 ? (
-            <HoaOne progress={handleProgress} arrowR={arrow} />
+            <HoaOne progress={handleProgress} arrowR={arrow} navigate={navigate}/>
           ) : progress === 2 ? (
             <HoaTwo
               progress={handleProgress}
@@ -99,7 +103,7 @@ const HoaForm = () => {
               arrowL={arrowL}
             />
           )}
-        </form>
+        </div>
       </div>
     </>
   );

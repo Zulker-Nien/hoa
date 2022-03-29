@@ -1,4 +1,4 @@
-button {
+.mainButton {
   margin: 0 auto;
   height: 5vh;
   width: 15vw;
@@ -20,7 +20,7 @@ button {
   }
   transition: 0.2s ease-out all;
 }
-button:hover {
+.mainButton:hover {
   // background-color: #fff;
 
   box-shadow: 0px 0px 1px 5px #e0ad98;
