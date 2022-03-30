@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import HoaForm from './Pages/Forms/HoaForm/HoaForm';
 import CityCorpForm from './Pages/Forms/CityCorpForm/CityCorpForm';
 import PropertyForm from './Pages/Forms/PropertyForm/PropertyForm';
+import Log from './Pages/ViewData/Log/Log';
 
 const App = ()=> {
   return (
@@ -13,6 +14,7 @@ const App = ()=> {
       <Route path="/hoaform" element={<HoaForm/>} />
       <Route path="/citycorpform" element={<CityCorpForm/>} />
       <Route path="/propertyform" element={<PropertyForm/>} />
+      <Route path="/log" element={<Log/>} />
     </Routes>
   );
 }

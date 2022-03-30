@@ -1,11 +1,12 @@
 import "./component.scss";
 
 const Button = (props) => {
-  const { icon, title, color, iconColor, margin } = props;
+  const { icon, title, color, iconColor, margin, clicked } = props;
 
   return (
     <>
       <button
+        onClick={clicked}
         type="submit"
         className="mainButton"
         style={{

@@ -6,11 +6,15 @@ class Store {
     makeAutoObservable(this);
   }
   
-  required = false;
+  division = ""
+  mayor = ""
+  phonenumber = ""
 
-  setRequired = () => {
-    this.required = true;
-    console.log(this.required)
+
+  setValue = (value) => {
+    this.division = value;
+    this.mayor = value;
+    this.phonenumber = value;
   };
 
 }

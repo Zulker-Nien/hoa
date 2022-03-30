@@ -37,7 +37,7 @@ const Home = () => {
           <div className="circle"></div>
           <h1>John Doe</h1>
           <div className="bottom">
-            <Link to="/">
+            <Link to="/" style={{textDecoration:"none"}}>
               <Button
                 title={"Logout"}
                 icon={logOut}
@@ -64,7 +64,7 @@ const Home = () => {
             </div>
             {clicked && (
               <div className="extension">
-                <Link to={"/hoaform"}>
+                <Link to={"/hoaform"} style={{textDecoration:"none"}}>
                   <Button
                     link=""
                     title="New Input"
@@ -81,7 +81,6 @@ const Home = () => {
             )}
             <div onClick={handleClickProp}>
               <Button
-                link={""}
                 title={"Property Form"}
                 margin={"20px"}
                 iconColor={"#fff"}
@@ -128,12 +127,12 @@ const Home = () => {
         <div className="dataColumns">
           <h1>View Data</h1>
           <div className="dataButtons">
+            <Link to="/log" style={{textDecoration:"none"}} >
             <Button
-              link={"/"}
               title={"Log"}
               margin={"20px"}
               iconColor={"#fff"}
-            />
+            /></Link>
             <Button
               link={"/"}
               title={"City Corporation"}
