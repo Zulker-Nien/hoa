@@ -5,7 +5,7 @@ import HoaForm from './Pages/Forms/HoaForm/HoaForm';
 import CityCorpForm from './Pages/Forms/CityCorpForm/CityCorpForm';
 import PropertyForm from './Pages/Forms/PropertyForm/PropertyForm';
 import Log from './Pages/ViewData/Log/Log';
-
+import CityView from './Pages/ViewData/Log/CityView/CityView';
 const App = ()=> {
   return (
     <Routes>
@@ -15,6 +15,7 @@ const App = ()=> {
       <Route path="/citycorpform" element={<CityCorpForm/>} />
       <Route path="/propertyform" element={<PropertyForm/>} />
       <Route path="/log" element={<Log/>} />
+      <Route path="/viewCityCorp" element={<CityView/>} />
     </Routes>
   );
 }

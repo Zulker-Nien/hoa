@@ -9,7 +9,6 @@ const log = () => {
         <div className="tableWrapper">
           <table>
             <tr className="tableHeader">
-            
               <th>Date</th>
               <th>HOA Name</th>
               <th>Market</th>
@@ -18,6 +17,7 @@ const log = () => {
               <th>Type</th>
               <th>Notes</th>
             </tr>
+
             <tr>
               <td>Alfreds Futterkiste</td>
               <td>Maria Anders</td>

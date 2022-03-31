@@ -27,7 +27,7 @@
           border: 1px solid #fff;
 
           height: 4vh !important;
-          background-color: hsl(212, 74%, 31%);
+          background-color: #154b8a;
           color: aliceblue;
         }
         td {
@@ -38,6 +38,9 @@
         tr:nth-child(even) {
           background-color: #f6f5f5;
         }
+        tr:nth-child(1):hover {
+            background-color: #154b8a;
+          }
         tr:hover{
             background-color: #b3dbff;
         }

@@ -37,7 +37,7 @@ const Home = () => {
           <div className="circle"></div>
           <h1>John Doe</h1>
           <div className="bottom">
-            <Link to="/" style={{textDecoration:"none"}}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <Button
                 title={"Logout"}
                 icon={logOut}
@@ -64,7 +64,7 @@ const Home = () => {
             </div>
             {clicked && (
               <div className="extension">
-                <Link to={"/hoaform"} style={{textDecoration:"none"}}>
+                <Link to={"/hoaform"} style={{ textDecoration: "none" }}>
                   <Button
                     link=""
                     title="New Input"
@@ -127,18 +127,17 @@ const Home = () => {
         <div className="dataColumns">
           <h1>View Data</h1>
           <div className="dataButtons">
-            <Link to="/log" style={{textDecoration:"none"}} >
-            <Button
-              title={"Log"}
-              margin={"20px"}
-              iconColor={"#fff"}
-            /></Link>
-            <Button
-              link={"/"}
-              title={"City Corporation"}
-              margin={"20px"}
-              iconColor={"#fff"}
-            />
+            <Link to="/log" style={{ textDecoration: "none" }}>
+              <Button title={"Log"} margin={"20px"} iconColor={"#fff"} />
+            </Link>
+
+            <Link to="/viewCityCorp" style={{ textDecoration: "none" }}>
+              <Button
+                title={"City Corporation"}
+                margin={"20px"}
+                iconColor={"#fff"}
+              />
+            </Link>
             <Button
               link={"/"}
               title={"All HOAs"}
