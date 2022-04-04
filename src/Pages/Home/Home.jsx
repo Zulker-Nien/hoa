@@ -5,11 +5,23 @@ import c2 from "./imgs/Circle_2.png";
 import logOut from "./imgs/logout.png";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../contexts/AuthContext";
+import { Navigate } from "react-router-dom";
+
 const Home = () => {
+  const { logout, currentUser, isAuthenticated } = useAuth();
+
   const [clicked, setClicked] = useState(false);
   const [clicked2, setClicked2] = useState(false);
   const [clickedProp, setClickedProp] = useState(false);
 
+  const logoutClicked = async () => {
+    try {
+      await logout();
+    } catch (error) {
+      alert(error.message);
+    }
+  };
   const handleClickHOA = () => {
     setClicked(!clicked);
     setClickedProp(false);
@@ -25,7 +37,9 @@ const Home = () => {
     setClicked(false);
     setClickedProp(!clickedProp);
   };
-
+  if (!isAuthenticated) {
+    return <Navigate to="/login" />;
+  } else
   return (
     <div className="mainContainer">
       <div className="mainLeft">
@@ -35,10 +49,11 @@ const Home = () => {
         </div>
         <div className="contentWrapper">
           <div className="circle"></div>
-          <h1>John Doe</h1>
+          <h1>{currentUser.email}</h1>
           <div className="bottom">
             <Link to="/" style={{ textDecoration: "none" }}>
               <Button
+                clicked={logoutClicked}
                 title={"Logout"}
                 icon={logOut}
                 color="#f0f8ff"
