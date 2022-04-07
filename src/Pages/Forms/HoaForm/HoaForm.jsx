@@ -1,7 +1,7 @@
 import "./hoaform.scss";
 import { useRef, useState } from "react";
 import BackBtn from "../../../components/BackBtn";
-import HoaOne from "./HoaOne";
+import HoaOne from "./hoaOne";
 import HoaTwo from "./hoaTwo";
 import HoaThree from "./hoaThree";
 import HoaFour from "./hoaFour";
